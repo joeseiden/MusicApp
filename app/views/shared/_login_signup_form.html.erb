@@ -1,6 +1,7 @@
 <% action = @params[:controller] == "users" ? users_url : session_url %>
 
 <form action="<%= action %>" method="post">
+  <%= auth_token %>
 
   <label for="email">Email</label>
   <input type="text" name="user[email]" id="email">

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    @params = params
     render :new
   end
 
