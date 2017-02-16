@@ -1,0 +1,14 @@
+<header>
+  <h1>All Bands</h1>
+  <!-- <img src="http://timesofindia.indiatimes.com/photo/45533362.cms"> -->
+</header>
+
+<body>
+<ul>
+  <% @bands.each do |band| %>
+    <li> <%= link_to band.name, band_url(band) %> </li>
+  <% end %>
+</ul>
+</body>
+
+<%= link_to "New band", new_band_url %>

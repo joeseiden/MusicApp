@@ -1,4 +1,7 @@
 class SessionsController < ApplicationController
+
+  before_action :already_logged_in, only: :new
+
   def new
     @params = params
     render :new
@@ -17,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to root_url
+    redirect_to bands_url
   end
 
 end
