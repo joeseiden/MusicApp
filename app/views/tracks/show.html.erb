@@ -4,6 +4,8 @@
 <%= "Bonus Track" if @track.bonus %>
 
 <br>
+<h4>Lyrics</h4>
+<%= @track.lyrics %>
 <br>
 
 <%= button_to("Back to #{@track.album.title}", album_url(@track.album), method: :get) %>
