@@ -1,0 +1,5 @@
+<h1>Add Album</h1>
+
+<%= render 'form', album: @album %>
+
+<%= button_to("Back to #{@band.name}", band_url(@band), method: :get) %>

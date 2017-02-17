@@ -1,0 +1,5 @@
+<h1>Edit Album</h1>
+
+<%= render 'form', album: @album %>
+
+<%= button_to("Back to #{@album.title}", album_url(@album), method: :get) %>

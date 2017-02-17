@@ -14,9 +14,6 @@
     <%= button_to("Login", new_session_url, method: :get) %>
     <%= button_to("Sign up", new_user_url, method: :get) %>
   <% end %>
-  <% unless current_page?(bands_url) %>
-    <%= button_to("Back to Bands", bands_url, method: :get) %>
-  <% end %>
 </header>
 
 <%= render 'shared/errors'%>
