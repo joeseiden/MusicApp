@@ -1,0 +1,5 @@
+<h1>Edit Track</h1>
+
+<%= render 'form', track: @track %>
+
+<%= button_to("Back to #{@track.name}", track_url(@track, method: :get) %>

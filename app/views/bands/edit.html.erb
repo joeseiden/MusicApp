@@ -1,3 +1,5 @@
 <h1>Edit Band</h1>
 
 <%= render 'form', band: @band %>
+
+<%= button_to("Back to #{@band.name}", bands_url, method: :get) %>

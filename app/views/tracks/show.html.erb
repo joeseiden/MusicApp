@@ -1,0 +1,11 @@
+<h1><%= @track.title %></h1>
+<h2> <%= @track.album.title %> - <%= @track.band.name %></h2>
+<h4>Track No. <%=  @track.ord %></h4>
+<%= "Bonus Track" if @track.bonus %>
+
+<br>
+<br>
+
+<%= button_to("Back to #{@track.album.title}", album_url(@track.album), method: :get) %>
+<%= button_to("Edit track", edit_track_url, method: :get) %>
+<%= button_to("Delete track", track_url, method: :delete) %>

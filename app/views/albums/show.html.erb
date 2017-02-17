@@ -3,6 +3,14 @@
 <h4><%= @album.year %></h4>
 <h4><%= @album.live ? "Live album" : "Studio album" %></h4>
 
+<body>
+  <h4>Tracks</h4>
+  <% @album.tracks.each do |track| %>
+     <%= track.ord %>. <a href="../tracks/<%= track.id %>"><%= track.title %> <br></a>
+  <% end %>
+</body>
+
+<br>
 
 <%= button_to("Back to #{@album.band.name}", band_url(@album.band), method: :get) %>
 <%= button_to("Add track", new_album_track_url(@album), method: :get) %>
